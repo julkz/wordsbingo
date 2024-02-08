@@ -1,0 +1,56 @@
+.PageWrapper {
+  width: 90%;
+  font-weight: 900;
+}
+
+.PageWrapper > h1 {
+  font-size: 1.5rem;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  word-break: break-word;
+  border: 1px solid white;
+  font-size: 0.6rem;
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+.marked {
+  background-image: url("../../assets/xmark.svg");
+  background-size: cover;
+}
+
+.back-btn {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  color: white;
+  top: 3%;
+  left: 3%;
+}
+
+.back-btn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+@media screen and (min-width: 1400px) {
+  .PageWrapper {
+    width: 45vw;
+  }
+
+  .grid-wrapper {
+    max-width: 1000px;
+    height: 90vh;
+  }
+
+  .grid-item {
+    font-size: 1.3rem;
+  }
+}

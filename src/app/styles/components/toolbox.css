@@ -1,0 +1,36 @@
+.toolbox-wrap {
+  position: fixed;
+  display: flex;
+  gap: 20px;
+  bottom: 5%;
+  right: 5%;
+}
+.toolbox-wrap img {
+  width: 35px;
+  height: 35px;
+}
+
+.toolbox-item {
+  position: relative;
+}
+
+.toolbox-item span {
+  display: none;
+  min-width: 200px;
+}
+
+.toolbox-item:hover {
+  cursor: pointer;
+}
+
+.toolbox-item:hover span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  transform: translate(-46%, -100%);
+  font-size: 12px;
+  font-weight: 100;
+}

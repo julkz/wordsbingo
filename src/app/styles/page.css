@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.banner {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: 900;
+  margin-top: 3%;
+  border: 1px solid white;
+  background: linear-gradient(#ffcc34 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.08em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.btn:hover {
+  color: black;
+  cursor: pointer;
+  --p: 100%;
+  --t: 0.3s;
+}
+
+.text-box {
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+  width: 200px;
+  font-size: 9px;
+}
+
+@media screen and (min-width: 1400px) {
+  .btn {
+    margin-top: 1%;
+  }
+}

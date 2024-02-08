@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      padding: {
+        '1/2': '50%',
+        full: '100%',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
