@@ -6,9 +6,10 @@ import Confetti from "react-confetti";
 import "../app/styles/pages/play.css";
 import "../app/globals.css";
 
-import { AllWords } from "../app/assets/words/words";
+import { AllWords } from "../app/assets/words/wordsEN";
 import ToolBox from "../components/toolbox";
 import backIcon from "../app/assets/back.svg";
+import Link from "next/link";
 
 export default function Play() {
   const [currentWords, setCurrentWords] = useState([...AllWords]);
@@ -131,11 +132,13 @@ export default function Play() {
 
   return (
     <div className="PageWrapper mt-5 text-center mx-auto">
-      <h1>VideoBingo</h1>
+      <h3>WordsBingo</h3>
 
-      <div className="back-btn" onClick={() => history.back()}>
-        <img src={backIcon.src} alt="Go back" />
-      </div>
+      <nav className="back-btn">
+        <Link href="/">
+          <img src={backIcon.src} alt="Go back" />
+        </Link>
+      </nav>
 
       <div className="grid-wrapper mt-8  w-full mx-auto mt-5">
         <div className="grid grid-cols-5 mt-1" key={gridKey}>

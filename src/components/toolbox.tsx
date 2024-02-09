@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import "../app/globals.css";
 import "../app/styles/components/toolbox.css";
 
 import infoIcon from "../app/assets/info.svg";

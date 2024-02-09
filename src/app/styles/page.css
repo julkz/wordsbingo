@@ -8,16 +8,14 @@
   flex-direction: column;
 }
 
-.title {
-  font-family: "Pacifico", cursive;
-  font-size: 3rem;
+.nav {
+  margin-top: 30px;
 }
 
 .btn {
   padding: 10px 25px;
   border-radius: 20px;
   font-weight: 900;
-  margin-top: 3%;
   border: 1px solid white;
   background: linear-gradient(#ffcc34 0 0) no-repeat calc(200% - var(--p, 0%))
     100% / 200% var(--p, 0.08em);
@@ -27,21 +25,14 @@
 
 .btn:hover {
   color: black;
+  border-color: black;
   cursor: pointer;
   --p: 100%;
   --t: 0.3s;
-}
-
-.text-box {
-  position: fixed;
-  bottom: 5%;
-  left: 2%;
-  width: 200px;
-  font-size: 9px;
+  margin-top: 0;
 }
 
 @media screen and (min-width: 1400px) {
   .btn {
-    margin-top: 1%;
   }
 }
