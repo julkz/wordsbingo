@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   gap: 20px;
-  bottom: 5%;
+  bottom: 9%;
   right: 5%;
 }
 .toolbox-wrap img {

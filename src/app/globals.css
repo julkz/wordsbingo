@@ -32,6 +32,12 @@ strong ~ p {
   margin-bottom: 1rem;
 }
 
+.PageWrapper {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
 .back-btn {
   position: absolute;
   width: 45px;
@@ -48,12 +54,12 @@ strong ~ p {
 
 footer {
   margin-top: 5rem;
+  background-color: #1f1f1f;
 }
 
 footer ul {
-  justify-content: center;
-  gap: 2%;
-  display: flex;
+  display: inline;
+  text-align: center;
   color: var(--text-grey);
 }
 
@@ -64,5 +70,11 @@ footer ul:hover {
 @media screen and (min-width: 1400px) {
   h3 {
     font-size: 3rem;
+  }
+
+  footer ul {
+    justify-content: center;
+    gap: 2%;
+    display: flex;
   }
 }

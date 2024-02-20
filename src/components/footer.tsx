@@ -11,9 +11,9 @@ export default function Footer() {
           <li>
             <Link href="/privacy">Privacy and Policies</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/about">About Us</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </footer>

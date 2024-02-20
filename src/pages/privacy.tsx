@@ -1,15 +1,9 @@
-import Link from "next/link";
 import "../app/globals.css";
-import backIcon from "../app/assets/back.svg";
+import Toolbox from "@/components/toolbox";
 
 export default function Privacy() {
   return (
-    <>
-      <nav className="back-btn">
-        <Link href="/">
-          <img src={backIcon.src} alt="Go back" />
-        </Link>
-      </nav>
+    <section className="PageWrapper">
       <strong>Privacy Policy</strong>
       <p>Last updated: February 08, 2024</p>
       <p>
@@ -543,6 +537,13 @@ export default function Privacy() {
       <ul>
         <li>By email: help@wordsbingo.com</li>
       </ul>
-    </>
+      <Toolbox
+        GenerateNewWords={() => {}}
+        RestartGame={() => {}}
+        showInfoIcon={false}
+        showRestartIcon={false}
+        showGenerateIcon={false}
+      />
+    </section>
   );
 }
