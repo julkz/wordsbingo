@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Confetti from "react-confetti";
 import "../app/styles/pages/play.css";
 import "../app/globals.css";
@@ -14,6 +15,9 @@ export default function Play() {
   const [markedItems, setMarkedItems] = useState<number[]>([]);
   const [gridKey, setGridKey] = useState(0); // Updating the GridKey triggers a dom update
   const [showConfetti, setShowConfetti] = useState(false); // State to trigger confetti
+
+  const searchParams = useSearchParams();
+  const search = searchParams.get("theme");
 
   useEffect(() => {
     setCurrentWords(shuffle(AllWords).slice(0, 25));
@@ -130,9 +134,10 @@ export default function Play() {
 
   return (
     <div className="PageWrapper mt-5 text-center mx-auto">
-      <h3 className="primaryFont">WordsBingo</h3>
+      <h3 className="primaryFont">WUant Editon</h3>
+      <h4 className="primaryFont">WordsBingo</h4>
 
-      <div className="grid-wrapper w-full mx-auto mt-5">
+      <div className="grid-wrapper w-full mx-auto mt-5 noSelect">
         <div className="grid grid-cols-5 mt-1" key={gridKey}>
           {renderGrid()}
         </div>

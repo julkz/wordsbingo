@@ -8,11 +8,24 @@ export default function Home() {
     <>
       <section className="banner">
         <h3>WordsBingo</h3>
+        <p className="description">Customize your card or pick a random one.</p>
         <nav className="nav">
-          <Link className="btn" href="/play">
-            Play
-          </Link>
+          <ul>
+            <li>
+              <Link className="btn" href="/play">
+                Random Card
+              </Link>
+            </li>
+            <li>
+              <Link className="btn" href="/cards">
+                Community Cards
+              </Link>
+            </li>
+          </ul>
         </nav>
+      </section>
+      <section className="howToPlay">
+        <h4>How to play ?</h4>
       </section>
       <Footer />
     </>

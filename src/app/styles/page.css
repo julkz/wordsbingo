@@ -2,37 +2,39 @@
 
 .banner {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
-.nav {
-  margin-top: 30px;
+.description {
+  margin-top: 1rem;
 }
 
-.btn {
-  padding: 10px 25px;
-  border-radius: 20px;
-  font-weight: 900;
-  border: 1px solid white;
-  background: linear-gradient(#ffcc34 0 0) no-repeat calc(200% - var(--p, 0%))
-    100% / 200% var(--p, 0.08em);
-  transition: 0.3s var(--t, 0s),
-    background-position 0.3s calc(0.3s - var(--t, 0s));
+.nav ul {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
 }
 
-.btn:hover {
-  color: black;
-  border-color: black;
-  cursor: pointer;
-  --p: 100%;
-  --t: 0.3s;
-  margin-top: 0;
+.nav ul li {
+  width: 100%;
+  margin: 1rem 1rem;
+}
+
+.howToPlay {
+  text-align: center;
 }
 
 @media screen and (min-width: 1400px) {
-  .btn {
+  nav ul li:first-child {
+    margin-top: 0;
+  }
+
+  nav ul li:nth-child(2) {
+    margin-top: 0;
   }
 }

@@ -5,7 +5,7 @@
   aspect-ratio: 1;
   word-break: break-word;
   border: 1px solid white;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 .grid-item:hover {
@@ -23,6 +23,6 @@
   }
 
   .grid-item {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
