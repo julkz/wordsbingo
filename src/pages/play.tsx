@@ -9,19 +9,52 @@ import "../app/globals.css";
 
 import { AllWords } from "../app/assets/words/wordsEN";
 import ToolBox from "../components/toolbox";
+import CardService from "../services/CardService";
+import FetchClient from "../ServiceClients/FetchClient";
 
 export default function Play() {
-  const [currentWords, setCurrentWords] = useState([...AllWords]);
+  const [currentCard, setCurrentCard] = useState({});
+  const [currentWords, setCurrentWords] = useState([]);
   const [markedItems, setMarkedItems] = useState<number[]>([]);
   const [gridKey, setGridKey] = useState(0); // Updating the GridKey triggers a dom update
   const [showConfetti, setShowConfetti] = useState(false); // State to trigger confetti
 
+  const cardService = new CardService(FetchClient);
   const searchParams = useSearchParams();
-  const search = searchParams.get("theme");
+  const cardId = searchParams.get("id");
 
   useEffect(() => {
-    setCurrentWords(shuffle(AllWords).slice(0, 25));
-  }, []);
+    const fetchCard = async () => {
+      try {
+        console.log("Card id: " + cardId);
+        if (!cardId) return; // Exit if cardId is not present
+        const card = await cardService.getCard(cardId);
+        setCurrentCard(card);
+        setCurrentWords(shuffle(card.words).slice(0, 25));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchCard();
+  }, [cardId]); // Fetch when cardId changes
+
+  // const fetchTodos = async () => {
+  //   try {
+  //     console.log("card id: " + cardId);
+  //     if (!cardId) return; // Exit if cardId is not present
+  //     let card = await cardService.getCard(cardId);
+  //     console.log("Stting curreent card: " + card);
+  //     setCurrentCard(card);
+  //     //setCurrentWords(shuffle(Card.words).slice(0, 25));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchTodos();
+  //   setCurrentWords(shuffle(currentCard.words).slice(0, 25));
+  // }, []);
 
   useEffect(() => {
     if (CheckWinningPattern()) {
@@ -134,7 +167,7 @@ export default function Play() {
 
   return (
     <div className="PageWrapper mt-5 text-center mx-auto">
-      <h3 className="primaryFont">WUant Editon</h3>
+      <h3 className="primaryFont">{currentCard.Name}</h3>
       <h4 className="primaryFont">WordsBingo</h4>
 
       <div className="grid-wrapper w-full mx-auto mt-5 noSelect">

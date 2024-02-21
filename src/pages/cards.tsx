@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import ToolBox from "../components/toolbox";
 import "../app/styles/pages/cards.css";
+import { AllCards } from "../app/assets/Cards/Cards";
 
 export default function Cards() {
   return (
@@ -15,56 +16,17 @@ export default function Cards() {
 
       <nav className="nav">
         <ul>
-          <li>
-            <Link
-              className="btn"
-              href={{ pathname: "/play", query: { theme: "wuantedition" } }}
-            >
-              WUANT edition
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="btn" href="/cards">
-              Whidow EditTIon
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link className="btn" href="/cards">
-              Nuno Santos
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link className="btn" href="/cards">
-              LEGenzed Boyz
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link className="btn" href="/cards">
-              MoraisHD
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link className="btn" href="/cards">
-              PewDiePie
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link className="btn" href="/cards">
-              IShowSpeed
-              <p>Created by: Author name</p>
-            </Link>
-          </li>
+          {AllCards.map((card) => (
+            <li>
+              <Link
+                className="btn"
+                href={{ pathname: "/play", query: { id: card.id } }}
+              >
+                {card.Name}
+                <p>Created by: {card.author}</p>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
       <ToolBox
