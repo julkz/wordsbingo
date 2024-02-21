@@ -2,8 +2,8 @@
   position: fixed;
   display: flex;
   gap: 20px;
-  bottom: 9%;
-  right: 5%;
+  bottom: 6%;
+  right: 3%;
 }
 .toolbox-wrap img {
   width: 35px;

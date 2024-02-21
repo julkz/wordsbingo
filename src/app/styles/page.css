@@ -29,6 +29,16 @@
   text-align: center;
 }
 
+.howToPlayBanner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.howToPlayBanner article {
+  margin-top: 3rem;
+}
+
 @media screen and (min-width: 1400px) {
   nav ul li:first-child {
     margin-top: 0;
@@ -36,5 +46,13 @@
 
   nav ul li:nth-child(2) {
     margin-top: 0;
+  }
+
+  .howToPlayBanner {
+    flex-direction: row;
+  }
+
+  .howToPlayBanner article {
+    flex: 25%;
   }
 }

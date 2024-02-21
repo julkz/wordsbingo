@@ -26,7 +26,6 @@ export default function Play() {
   useEffect(() => {
     const fetchCard = async () => {
       try {
-        console.log("Card id: " + cardId);
         if (!cardId) return; // Exit if cardId is not present
         const card = await cardService.getCard(cardId);
         setCurrentCard(card);
@@ -37,24 +36,6 @@ export default function Play() {
     };
     fetchCard();
   }, [cardId]); // Fetch when cardId changes
-
-  // const fetchTodos = async () => {
-  //   try {
-  //     console.log("card id: " + cardId);
-  //     if (!cardId) return; // Exit if cardId is not present
-  //     let card = await cardService.getCard(cardId);
-  //     console.log("Stting curreent card: " + card);
-  //     setCurrentCard(card);
-  //     //setCurrentWords(shuffle(Card.words).slice(0, 25));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchTodos();
-  //   setCurrentWords(shuffle(currentCard.words).slice(0, 25));
-  // }, []);
 
   useEffect(() => {
     if (CheckWinningPattern()) {
@@ -167,8 +148,8 @@ export default function Play() {
 
   return (
     <div className="PageWrapper mt-5 text-center mx-auto">
-      <h3 className="primaryFont">{currentCard.Name}</h3>
-      <h4 className="primaryFont">WordsBingo</h4>
+      <h3>{currentCard.Name}</h3>
+      <h4>WordsBingo</h4>
 
       <div className="grid-wrapper w-full mx-auto mt-5 noSelect">
         <div className="grid grid-cols-5 mt-1" key={gridKey}>

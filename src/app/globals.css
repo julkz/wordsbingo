@@ -3,8 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --text-grey: #666;
+  --text-grey: #999;
   --text-dark: #333;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: radial-gradient(circle, #cea52a, 45%, #ffcc34 63%);
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(13deg, #f0f0f0 0%, #f0f0f0 0%);
+}
+::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 0px;
 }
 
 .noSelect {
@@ -17,17 +33,19 @@ body {
   margin: auto;
   margin-top: 1rem;
   min-height: 100vh;
+
+  overflow-x: hidden;
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   font-family: "Pacifico", cursive;
   text-align: center;
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   font-family: "Pacifico", cursive;
   text-align: center;
@@ -103,12 +121,12 @@ footer ul:hover {
 }
 
 @media screen and (min-width: 1400px) {
-  h3 {
-    font-size: 3rem;
+  /* h3 {
+    font-size: 4rem;
   }
   h4 {
-    font-size: 2rem;
-  }
+    font-size: 3rem;
+  } */
 
   footer ul {
     justify-content: center;

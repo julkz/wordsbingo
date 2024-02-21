@@ -26,6 +26,11 @@ export default function Home() {
       </section>
       <section className="howToPlay">
         <h4>How to play ?</h4>
+        <section className="howToPlayBanner">
+          <article>Pick a category or a random one!</article>
+          <article>Prepare your video of choice.</article>
+          <article>Have fun with your friends!</article>
+        </section>
       </section>
       <Footer />
     </>

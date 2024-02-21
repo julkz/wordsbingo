@@ -1,6 +1,7 @@
 import Footer from "../components/footer";
 import GoogleAnalytics from "../lib/GoogleAnalytics";
 import "../app/globals.css";
+
 export default function App({ Component, pageProps }) {
   return (
     <>
