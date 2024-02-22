@@ -13,6 +13,16 @@ class CardService {
     }
   }
 
+  async getRandomCard() {
+    try {
+      const response = this.httpClient.getRandom();
+      return response;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }
+
   async createCard(card) {
     try {
       const response = this.httpClient.post("", card);

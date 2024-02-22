@@ -32,9 +32,9 @@ const Toolbox: React.FunctionComponent<ToolBoxProps> = ({ ...props }) => {
     <div className="toolbox-wrap">
       {showHomeIcon ? (
         <div className="toolbox-item">
-          <span>Return Home</span>
+          <span>Go Home</span>
           <Link href={"/"}>
-            <img src={homeIcon.src} alt="Return home" />
+            <img src={homeIcon.src} alt="Go home" />
           </Link>
         </div>
       ) : (

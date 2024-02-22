@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../app/styles/components/footer.css";
 
 export default function Footer() {
   return (

@@ -1,4 +1,5 @@
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
+import Footer from "@/components/footer";
 import "./globals.css";
 
 export const metadata = {
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleAnalytics GA_MEASUREMENT_ID="G-JL3149DC93" />
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }

@@ -13,46 +13,24 @@
   margin-top: 1rem;
 }
 
-.nav ul {
+.heroNav ul {
   display: flex;
   align-items: center;
   margin-top: 2rem;
   flex-direction: column;
 }
 
-.nav ul li {
+.heroNav ul li {
   width: 100%;
   margin: 1rem 1rem;
 }
 
-.howToPlay {
-  text-align: center;
-}
-
-.howToPlayBanner {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3rem;
-}
-
-.howToPlayBanner article {
-  margin-top: 3rem;
-}
-
 @media screen and (min-width: 1400px) {
-  nav ul li:first-child {
+  .heroNav ul li:first-child {
     margin-top: 0;
   }
 
-  nav ul li:nth-child(2) {
+  .heroNav ul li:nth-child(2) {
     margin-top: 0;
-  }
-
-  .howToPlayBanner {
-    flex-direction: row;
-  }
-
-  .howToPlayBanner article {
-    flex: 25%;
   }
 }

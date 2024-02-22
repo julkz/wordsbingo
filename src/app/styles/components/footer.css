@@ -1,0 +1,26 @@
+footer {
+  margin-top: 5rem;
+  background-color: #1f1f1f;
+}
+
+footer ul {
+  display: inline;
+  text-align: center;
+  color: var(--text-grey);
+}
+
+footer ul:hover {
+  color: var(--text-grey);
+}
+
+@media screen and (min-width: 1400px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul {
+    justify-content: center;
+    gap: 2%;
+    display: flex;
+  }
+}

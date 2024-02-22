@@ -14,8 +14,12 @@
 }
 
 .marked {
-  background-image: url("../../assets/xmark.svg");
+  background-image: url("../../src/app/assets/xmark.svg");
   background-size: cover;
+}
+
+.mt-3 {
+  margin-top: 12rem;
 }
 
 @media screen and (min-width: 1100px) {

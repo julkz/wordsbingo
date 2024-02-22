@@ -1,4 +1,3 @@
-import { AllWords } from "../app/assets/words/wordsEN";
 import { AllCards } from "../app/assets/Cards/Cards";
 
 const FetchClient = {
@@ -9,6 +8,9 @@ const FetchClient = {
       }
     }
     return null;
+  },
+  async getRandom() {
+    return AllCards[Math.floor(Math.random() * AllCards.length)];
   },
   async post(url, body) {
     return await [];

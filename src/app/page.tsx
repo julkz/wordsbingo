@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import Footer from "@/components/footer";
+import AboutUs from "../sections/aboutus";
+import HowToPlay from "../sections/howtoplay";
 import "./styles/page.css";
 
 export default function Home() {
@@ -8,11 +9,14 @@ export default function Home() {
     <>
       <section className="banner">
         <h3>WordsBingo</h3>
-        <p className="description">Customize your card or pick a random one.</p>
-        <nav className="nav">
+        <p className="description">Pick a themed card or a random one.</p>
+        <nav className="heroNav">
           <ul>
             <li>
-              <Link className="btn" href="/play">
+              <Link
+                className="btn"
+                href={{ pathname: "/play", query: { id: "random" } }}
+              >
                 Random Card
               </Link>
             </li>
@@ -24,15 +28,8 @@ export default function Home() {
           </ul>
         </nav>
       </section>
-      <section className="howToPlay">
-        <h4>How to play ?</h4>
-        <section className="howToPlayBanner">
-          <article>Pick a category or a random one!</article>
-          <article>Prepare your video of choice.</article>
-          <article>Have fun with your friends!</article>
-        </section>
-      </section>
-      <Footer />
+      <HowToPlay></HowToPlay>
+      <AboutUs></AboutUs>
     </>
   );
 }

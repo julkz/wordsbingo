@@ -1,0 +1,23 @@
+.howToPlay {
+  text-align: center;
+}
+
+.howToPlayBanner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.howToPlayBanner article {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .howToPlayBanner {
+    flex-direction: row;
+  }
+
+  .howToPlayBanner article {
+    flex: 25%;
+  }
+}

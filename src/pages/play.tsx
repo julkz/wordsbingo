@@ -4,17 +4,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Confetti from "react-confetti";
-import "../app/styles/pages/play.css";
-import "../app/globals.css";
-
-import { AllWords } from "../app/assets/words/wordsEN";
 import ToolBox from "../components/toolbox";
 import CardService from "../services/CardService";
 import FetchClient from "../ServiceClients/FetchClient";
+import HowToPlay from "@/sections/howtoplay";
+import "./play.css";
 
 export default function Play() {
   const [currentCard, setCurrentCard] = useState({});
-  const [currentWords, setCurrentWords] = useState([]);
+  const [currentWords, setCurrentWords] = useState([""]);
   const [markedItems, setMarkedItems] = useState<number[]>([]);
   const [gridKey, setGridKey] = useState(0); // Updating the GridKey triggers a dom update
   const [showConfetti, setShowConfetti] = useState(false); // State to trigger confetti
@@ -25,9 +23,19 @@ export default function Play() {
 
   useEffect(() => {
     const fetchCard = async () => {
+      let card;
       try {
-        if (!cardId) return; // Exit if cardId is not present
-        const card = await cardService.getCard(cardId);
+        if (!cardId) {
+          console.log("Card id null");
+          return;
+        } else if (cardId == "random") {
+          console.log("Card id random");
+          card = await cardService.getRandomCard();
+        } else {
+          console.log("Card id with id: " + cardId);
+          card = await cardService.getCard(cardId);
+          console.log("Card fetched: " + card.Name);
+        }
         setCurrentCard(card);
         setCurrentWords(shuffle(card.words).slice(0, 25));
       } catch (error) {
@@ -156,6 +164,7 @@ export default function Play() {
           {renderGrid()}
         </div>
       </div>
+      <HowToPlay classNames="mt-3"></HowToPlay>
       <ToolBox
         RestartGame={handleRestartGame}
         GenerateNewWords={handleGenerateNewWords}
