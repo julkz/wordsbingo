@@ -15,9 +15,6 @@ export default function Footer() {
           <li>
             <Link href="/howtoplay">How to play</Link>
           </li>
-          {/* <li>
-            <Link href="/about">About Us</Link>
-          </li> */}
         </ul>
       </nav>
     </footer>
