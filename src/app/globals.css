@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+/*
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700");
+/*
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+*/
+
 :root {
   --text-grey: #999;
   --text-dark: #333;
@@ -40,24 +55,40 @@ body {
 h3 {
   font-size: 3rem;
   font-weight: 900;
-  font-family: "Pacifico", cursive;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 
 h4 {
   font-size: 2rem;
   font-weight: 900;
-  font-family: "Pacifico", cursive;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
 }
 
 html {
   background-color: black;
   color: white;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .primaryFont {
-  font-family: "Pacifico", cursive;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.gameFont {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 strong ~ p {

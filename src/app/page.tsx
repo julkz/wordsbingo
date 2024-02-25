@@ -16,10 +16,7 @@ export default function Home() {
         <nav className="heroNav">
           <ul>
             <li>
-              <Link
-                className="btn"
-                href={{ pathname: "/play", query: { id: "random" } }}
-              >
+              <Link className="btn" href={{ pathname: "/play" }}>
                 Random Card
               </Link>
             </li>
@@ -32,7 +29,6 @@ export default function Home() {
         </nav>
       </section>
       <HowToPlay
-        classNames={""}
         imageOne={PickACategoryStepImg.src}
         imageTwo={PickAVideoStepImg.src}
         imageThree={HaveFunStepImg.src}

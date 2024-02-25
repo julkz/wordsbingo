@@ -1,3 +1,4 @@
+import Head from "next/head";
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import Footer from "@/components/footer";
 import "./globals.css";
@@ -9,7 +10,7 @@ export const metadata = {
   meta: {
     charset: "utf-8",
     name: {
-      keywords: "WordsBingo,Bingo,react,davidthesousa, typescript, project",
+      keywords: "WordsBingo,Bingo,react ,davidthesousa, typescript, project",
     },
   },
 };
@@ -21,6 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-JL3149DC93" />
+        <link rel="icon" sizes="16x16" href="../app/assets/favicon.ico" />
+      </Head>
       <GoogleAnalytics GA_MEASUREMENT_ID="G-JL3149DC93" />
       <body>
         {children}
