@@ -12,9 +12,14 @@ import WatchYourCardImg from "../app/assets/WatchYourCardsStep.png";
 import WatchAVideoImg from "../app/assets/WatchAVideoStep.png";
 import FillTheWordsImg from "../app/assets/FillTheWordsStep.png";
 import "./play.css";
+import "../app/globals.css";
+
+interface Card {
+  Name: string;
+}
 
 export default function Play() {
-  const [currentCard, setCurrentCard] = useState({});
+  const [currentCard, setCurrentCard] = useState<Card>({ Name: "" });
   const [currentWords, setCurrentWords] = useState([""]);
   const [markedItems, setMarkedItems] = useState<number[]>([]);
   const [gridKey, setGridKey] = useState(0); // Updating the GridKey triggers a dom update
@@ -22,31 +27,27 @@ export default function Play() {
 
   const cardService = new CardService(FetchClient);
   const searchParams = useSearchParams();
-  const cardId = searchParams.get("id");
 
   useEffect(() => {
-    const fetchCard = async () => {
-      let card;
-      try {
-        if (!cardId) {
-          console.log("Card id null");
-          return;
-        } else if (cardId == "random") {
-          console.log("Card id random");
-          card = await cardService.getRandomCard();
-        } else {
-          console.log("Card id with id: " + cardId);
-          card = await cardService.getCard(cardId);
-          console.log("Card fetched: " + card.Name);
+    if (searchParams !== null) {
+      const cardId = searchParams.get("id") ?? "random";
+      const fetchCard = async () => {
+        let card;
+        try {
+          if (cardId == "random") {
+            card = await cardService.getRandomCard();
+          } else {
+            card = await cardService.getCard(cardId);
+          }
+          setCurrentCard(card);
+          setCurrentWords(shuffle(card.words).slice(0, 25));
+        } catch (error) {
+          //console.log(error);
         }
-        setCurrentCard(card);
-        setCurrentWords(shuffle(card.words).slice(0, 25));
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchCard();
-  }, [cardId]); // Fetch when cardId changes
+      };
+      fetchCard();
+    }
+  }, [searchParams]); // Fetch when searchParams changes
 
   useEffect(() => {
     if (CheckWinningPattern()) {
@@ -163,16 +164,16 @@ export default function Play() {
       <h4>WordsBingo</h4>
 
       <div className="grid-wrapper w-full mx-auto mt-5 noSelect">
-        <div className="grid grid-cols-5 mt-1" key={gridKey}>
+        <div className="grid grid-cols-5 mt-1 gameFont" key={gridKey}>
           {renderGrid()}
         </div>
       </div>
       <HowToPlay
-        classNames="mt-3"
+        classNames={["mt-3"]}
         imageOne={WatchYourCardImg.src}
         imageTwo={WatchAVideoImg.src}
         imageThree={FillTheWordsImg.src}
-      ></HowToPlay>
+      />
       <ToolBox
         RestartGame={handleRestartGame}
         GenerateNewWords={handleGenerateNewWords}

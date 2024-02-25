@@ -56,7 +56,7 @@ export default function HowToPlay() {
 
           <h4>Call Bingo!</h4>
           <p>
-            If you complete a line, shout "Bingo!". The game host will
+            If you complete a line, shout &quot;Bingo!&quot;. The game host will
             automaticly verify your card to confirm your win.
           </p>
 

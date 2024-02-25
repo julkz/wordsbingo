@@ -10,10 +10,10 @@ export default function Footer() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/privacy">Privacy and Policies</Link>
+            <Link href="/howtoplay">How to play</Link>
           </li>
           <li>
-            <Link href="/howtoplay">How to play</Link>
+            <Link href="/privacy">Privacy and Policies</Link>
           </li>
         </ul>
       </nav>

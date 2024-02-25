@@ -1,11 +1,18 @@
 import "./howtoplay.css";
 
+interface props {
+  classNames?: string[];
+  imageOne: string;
+  imageTwo: string;
+  imageThree: string;
+}
+
 export default function HowToPlay({
   classNames,
   imageOne,
   imageTwo,
   imageThree,
-}) {
+}: props) {
   return (
     <section className={"PageWrapper " + classNames}>
       <h4>How to play ?</h4>
