@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ToolBox from "../components/toolbox";
 import { AllCards } from "../app/assets/Cards/Cards";
 import "../app/styles/pages/cards.css";

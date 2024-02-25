@@ -1,0 +1,32 @@
+.howtoplayWrapper section {
+  margin-top: 3rem;
+  margin: auto;
+}
+
+.howtoplaysection {
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.howtoplaysection h4 {
+  margin-top: 1rem;
+}
+
+.howtoplaysection h4:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1400px) {
+  .howtoplayWrapper p {
+    width: 60%;
+    margin: auto;
+  }
+  .howtoplayWrapper section {
+    width: 90%;
+  }
+
+  .howtoplaysection {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+}

@@ -2,6 +2,9 @@
 import Link from "next/link";
 import AboutUs from "../sections/aboutus";
 import HowToPlay from "../sections/howtoplay";
+import PickACategoryStepImg from "../app/assets/PickACategoryStep.png";
+import PickAVideoStepImg from "../app/assets/PickAVideoStep.png";
+import HaveFunStepImg from "../app/assets/HaveFunStep.png";
 import "./styles/page.css";
 
 export default function Home() {
@@ -28,7 +31,12 @@ export default function Home() {
           </ul>
         </nav>
       </section>
-      <HowToPlay></HowToPlay>
+      <HowToPlay
+        classNames={""}
+        imageOne={PickACategoryStepImg.src}
+        imageTwo={PickAVideoStepImg.src}
+        imageThree={HaveFunStepImg.src}
+      ></HowToPlay>
       <AboutUs></AboutUs>
     </>
   );

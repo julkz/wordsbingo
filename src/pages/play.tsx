@@ -8,6 +8,9 @@ import ToolBox from "../components/toolbox";
 import CardService from "../services/CardService";
 import FetchClient from "../ServiceClients/FetchClient";
 import HowToPlay from "@/sections/howtoplay";
+import WatchYourCardImg from "../app/assets/WatchYourCardsStep.png";
+import WatchAVideoImg from "../app/assets/WatchAVideoStep.png";
+import FillTheWordsImg from "../app/assets/FillTheWordsStep.png";
 import "./play.css";
 
 export default function Play() {
@@ -164,7 +167,12 @@ export default function Play() {
           {renderGrid()}
         </div>
       </div>
-      <HowToPlay classNames="mt-3"></HowToPlay>
+      <HowToPlay
+        classNames="mt-3"
+        imageOne={WatchYourCardImg.src}
+        imageTwo={WatchAVideoImg.src}
+        imageThree={FillTheWordsImg.src}
+      ></HowToPlay>
       <ToolBox
         RestartGame={handleRestartGame}
         GenerateNewWords={handleGenerateNewWords}

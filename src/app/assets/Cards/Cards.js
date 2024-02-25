@@ -1,7 +1,7 @@
 exports.AllCards = [
   {
     Name: "Wuant",
-    author: "Default",
+    author: "WordsBingo",
     id: 1,
     words: [
       "Jogar",
@@ -57,7 +57,7 @@ exports.AllCards = [
   },
   {
     Name: "SirKazzio",
-    author: "Default",
+    author: "WordsBingo",
     id: 2,
     words: [
       "Jogar",
@@ -113,7 +113,7 @@ exports.AllCards = [
   },
   {
     Name: "Nuno Agonia",
-    author: "Default",
+    author: "WordsBingo",
     id: 3,
     words: [
       "Rir",
@@ -170,7 +170,7 @@ exports.AllCards = [
   },
   {
     Name: "SEA3PO",
-    author: "Default",
+    author: "WordsBingo",
     id: 4,
     words: [
       "Jogar",
@@ -226,7 +226,7 @@ exports.AllCards = [
   },
   {
     Name: "Nurb",
-    author: "Default",
+    author: "WordsBingo",
     id: 5,
     words: [
       "Jogar",
@@ -281,7 +281,7 @@ exports.AllCards = [
   },
   {
     Name: "Whindersson",
-    author: "Default",
+    author: "WordsBingo",
     id: 6,
     words: [
       "Rir",
@@ -338,7 +338,7 @@ exports.AllCards = [
   },
   {
     Name: "Felipe Neto",
-    author: "Default",
+    author: "WordsBingo",
     id: 7,
     words: [
       "Rir",
@@ -395,7 +395,7 @@ exports.AllCards = [
   },
   {
     Name: "Luccas Neto",
-    author: "Default",
+    author: "WordsBingo",
     id: 8,
     words: [
       "Brincar",
@@ -451,7 +451,7 @@ exports.AllCards = [
   },
   {
     Name: "Giovanna",
-    author: "Default",
+    author: "WordsBingo",
     id: 9,
     words: [
       "Viajar",
@@ -507,7 +507,7 @@ exports.AllCards = [
   },
   {
     Name: "Julio Cocielo",
-    author: "Default",
+    author: "WordsBingo",
     id: 10,
     words: [
       "Jogar",
@@ -562,7 +562,7 @@ exports.AllCards = [
   },
   {
     Name: "Figueiredo",
-    author: "Default",
+    author: "WordsBingo",
     id: 11,
     words: [
       "Jogar",
@@ -617,8 +617,63 @@ exports.AllCards = [
   },
   {
     Name: "Tiagovski",
-    author: "Default",
+    author: "WordsBingo",
     id: 12,
+    words: [
+      "Jogar",
+      "Gritar",
+      "Rir",
+      "Cantar",
+      "Dançar",
+      "Atuar",
+      "Entrevistar",
+      "Narrar",
+      "Criar",
+      "Editar",
+      "Publicar",
+      "Compartilhar",
+      "Reagir",
+      "Comentar",
+      "Explorar",
+      "Experimentar",
+      "Divertir",
+      "Surpreender",
+      "Desafiar",
+      "Competir",
+      "Fazer",
+      "Ajudar",
+      "Inspirar",
+      "Motivar",
+      "Sonhar",
+      "Conquistar",
+      "Aprender",
+      "Ensinar",
+      "Estudar",
+      "Trabalhar",
+      "Descobrir",
+      "Investigar",
+      "Questionar",
+      "Refletir",
+      "Inovar",
+      "Comunicar",
+      "Colaborar",
+      "Conectar",
+      "Liderar",
+      "Cooperar",
+      "Encorajar",
+      "Respeitar",
+      "Amar",
+      "Valorizar",
+      "Agradecer",
+      "Apoiar",
+      "Celebrar",
+      "Incentivar",
+    ],
+  },
+  {
+    Name: "Random",
+    author: "WordsBingo",
+    id: "random",
     words: [
       "Jogar",
       "Gritar",

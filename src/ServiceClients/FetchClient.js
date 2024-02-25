@@ -10,7 +10,12 @@ const FetchClient = {
     return null;
   },
   async getRandom() {
-    return AllCards[Math.floor(Math.random() * AllCards.length)];
+    for (let i = 0; i < AllCards.length; i++) {
+      if (AllCards[i].id == "random") {
+        return AllCards[i];
+      }
+    }
+    return null;
   },
   async post(url, body) {
     return await [];

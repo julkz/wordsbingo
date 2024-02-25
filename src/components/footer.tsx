@@ -12,6 +12,9 @@ export default function Footer() {
           <li>
             <Link href="/privacy">Privacy and Policies</Link>
           </li>
+          <li>
+            <Link href="/howtoplay">How to play</Link>
+          </li>
           {/* <li>
             <Link href="/about">About Us</Link>
           </li> */}
