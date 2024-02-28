@@ -9,6 +9,13 @@
   font-weight: 900;
 }
 
+.grid-item .textarea {
+  text-align: center;
+  resize: none;
+  width: 100%;
+  outline: none;
+}
+
 .grid-item:hover {
   cursor: pointer;
 }
@@ -22,12 +29,50 @@
   margin-top: 12rem;
 }
 
+/* Created */
+.inputwrapper {
+  position: relative;
+}
+
+.inputwrapper:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.inputwrapper input {
+  background-color: black;
+  outline: none;
+  text-align: center;
+}
+
+.startGame {
+  margin: 3rem auto;
+}
+
+.disabled {
+  animation: none;
+  display: none;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.inputwrapper span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1rem;
+  animation: blinker 1s linear infinite;
+}
+
 @media screen and (min-width: 1100px) {
   .grid-wrapper {
     max-width: 45vw;
   }
 
   .grid-item {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }

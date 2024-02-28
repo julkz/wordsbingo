@@ -25,6 +25,11 @@ export default function Home() {
                 Community Cards
               </Link>
             </li>
+            <li>
+              <Link className="btn" href="/create">
+                Create your card
+              </Link>
+            </li>
           </ul>
         </nav>
       </section>

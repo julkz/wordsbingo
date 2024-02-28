@@ -53,36 +53,41 @@ body {
 }
 
 h3 {
+  width: fit-content;
+  margin: 0 auto;
   font-size: 3rem;
+  font-family: "Kode Mono", monospace;
   font-weight: 900;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
+}
+
+.h3 {
+  font-size: 3rem;
+}
+
+.h4 {
+  font-size: 2rem;
 }
 
 h4 {
+  width: fit-content;
+  margin: 0 auto;
   font-size: 2rem;
+  font-family: "Kode Mono", monospace;
   font-weight: 900;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
 }
 
 html {
   background-color: black;
   color: white;
-  font-family: "VT323", monospace;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
 .primaryFont {
   font-family: "Kode Mono", monospace;
-  font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
 }
 
 .gameFont {
@@ -119,7 +124,6 @@ strong ~ p {
   cursor: pointer;
   --p: 100%;
   --t: 0.3s;
-  margin-top: 0;
 }
 
 .back-btn {
